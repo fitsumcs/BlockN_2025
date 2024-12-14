@@ -72,8 +72,8 @@ const Navbar = () => {
                 onClick={() => {
                   setActiveMenu(menu);
                   // Navigate for specific menu items
-                  if (menu === "Кешбек") navigate("/");
-                  if (menu === "Партнерство") navigate("/partnerships");
+                  if (menu === "Cashback") navigate("/");
+                  if (menu === "Partnership") navigate("/partnerships");
                 }}
               >
                 {menu}
