@@ -55,26 +55,30 @@ const Navbar = () => {
 
           {/* Menu Items */}
           <ul className="hidden sm:flex space-x-6 pl-12 text-sm">
-            {["Кешбек", "Карта", "Криптовалюта", "Партнерство", "Хто Ми"].map(
-              (menu) => (
-                <li
-                  key={menu}
-                  className={`cursor-pointer ${
-                    activeMenu === menu
-                      ? "text-orange-500 font-semibold"
-                      : "hover:text-orange-500"
-                  }`}
-                  onClick={() => {
-                    setActiveMenu(menu);
-                    // Navigate for specific menu items
-                    if (menu === "Кешбек") navigate("/");
-                    if (menu === "Партнерство") navigate("/partnerships");
-                  }}
-                >
-                  {menu}
-                </li>
-              )
-            )}
+            {[
+              "Cashback",
+              "Map",
+              "Cryptocurrency",
+              "Partnership",
+              "About us",
+            ].map((menu) => (
+              <li
+                key={menu}
+                className={`cursor-pointer ${
+                  activeMenu === menu
+                    ? "text-orange-500 font-semibold"
+                    : "hover:text-orange-500"
+                }`}
+                onClick={() => {
+                  setActiveMenu(menu);
+                  // Navigate for specific menu items
+                  if (menu === "Кешбек") navigate("/");
+                  if (menu === "Партнерство") navigate("/partnerships");
+                }}
+              >
+                {menu}
+              </li>
+            ))}
           </ul>
         </div>
 
